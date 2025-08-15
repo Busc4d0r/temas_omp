@@ -51,9 +51,9 @@
           "type": "executiontime"
         },
         {
-          "background": "#575656",
-          "foreground": "#d6deeb",
-          "leading_diamond": "<transparent,#575656>\ue0b0</>",
+          "background": "#107c10",
+          "foreground": "#191919",
+          "leading_diamond": "<transparent,#107c10>\ue0b0</>",
           "properties": {
             "branch_icon": "\ue725 ",
             "fetch_status": true,
