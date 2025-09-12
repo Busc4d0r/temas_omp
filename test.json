@@ -1,0 +1,63 @@
+{
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "final_space": true,
+    "version": 3,
+    "blocks": [
+    {
+        "type": "prompt",
+        "alignment": "left",
+        "segments": [
+        {
+            "type": "os",
+            "style": "diamond",
+            "leading_diamond": "\ue0b2",
+            "trailing_diamond": "<transparent,#0F7C11>\ue0b2</>",
+            "foreground": "#D6DEEB",
+            "background": "#0F7C11",
+            "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}}",
+            "properties": {
+                "windows": "\ue62a ",
+                "ubuntu": "\uf31b "
+            }
+        },
+        {
+            "type": "shell",
+            "style": "diamond",
+            "leading_diamond": "\ue0b2",
+            "trailing_diamond": "<transparent,#3A3A3A>\ue0b2</>",
+            "foreground": "#D6DEEB",
+            "background": "#3A3A3A",
+            "properties": {
+                    "mapped_shell_names": {
+                    "pwsh": "\uebc7",
+                    "bash": "\ue760"
+                }
+            }
+        },
+        {
+            "type": "session",
+            "style": "diamond",
+            "leading_diamond": "\ue0b2",
+            "trailing_diamond": "\ue0b0",
+            "foreground": "#D6DEEB",
+            "background": "#0F7C11",
+            "template": "{{ if .SSHSession }}\ueb39 {{ end }}{{ .UserName }}"
+        },
+        {
+            "type": "executiontime",
+            "style": "diamond",
+            "leading_diamond": "<transparent,#3A3A3A>\ue0b0</>",
+            "trailing_diamond": "\ue0b0",
+            "foreground": "#D6DEEB",
+            "background": "#3A3A3A",
+            "template": " <#fefefe></> {{ .FormattedMs }} ",
+            "properties": {
+            "threshold": 500,
+            "style": "austin",
+            "always_enabled": true
+            }
+        }
+        ]
+    }
+    ]
+}

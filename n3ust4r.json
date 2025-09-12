@@ -6,8 +6,8 @@
       "newline": true,
       "segments": [
         {
-          "background": "#107C10",
-          "foreground": "#FEF5ED",
+          "background": "#0F7C11",
+          "foreground": "#D6DEEB",
           "leading_diamond": "\ue0b2",
           "properties": {
             "macos": "\uf179 ",
@@ -16,31 +16,31 @@
           },
           "style": "diamond",
           "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}}",
-          "trailing_diamond": "<transparent,#107C10>\ue0b2</>",
+          "trailing_diamond": "<transparent,#0F7C11>\ue0b2</>",
           "type": "os"
         },
         {
-          "background": "#FEF5ED",
-          "foreground": "#011627",
+          "background": "#3A3A3A",
+          "foreground": "#D6DEEB",
           "leading_diamond": "\ue0b2",
           "style": "diamond",
           "template": "\uf489 {{ .Name }} ",
-          "trailing_diamond": "<transparent,#FEF5ED>\ue0b2</>",
+          "trailing_diamond": "<transparent,#3A3A3A>\ue0b2</>",
           "type": "shell"
         },
         {
           "type": "session",
           "style": "diamond",
-          "foreground": "#191919",
-          "background": "#107C10",
+          "background": "#0F7C11",
+          "foreground": "#D6DEEB",
           "leading_diamond": "\ue0b2",
           "trailing_diamond": "\ue0b0",
           "template": "{{ if .SSHSession }} {{ end }}{{ .UserName }}"
         },
         {
-          "background": "#575656",
-          "foreground": "#d6deeb",
-          "leading_diamond": "<transparent,#575656>\ue0b0</>",
+          "background": "#3A3A3A",
+          "foreground": "#D6DEEB",
+          "leading_diamond": "<transparent,#3A3A3A>\ue0b0</>",
           "properties": {
             "style": "roundrock",
             "threshold": 0
@@ -51,9 +51,9 @@
           "type": "executiontime"
         },
         {
-          "background": "#107c10",
-          "foreground": "#191919",
-          "leading_diamond": "<transparent,#107c10>\ue0b0</>",
+          "background": "#0F7C11",
+          "foreground": "#D6DEEB",
+          "leading_diamond": "<transparent,#0F7C11>\ue0b0</>",
           "properties": {
             "branch_icon": "\ue725 ",
             "fetch_status": true,
@@ -122,7 +122,7 @@
   "console_title_template": "{{ .Folder }}",
   "transient_prompt": {
     "background": "transparent",
-    "foreground": "#FEF5ED",
+    "foreground": "#D6DEEB",
     "template": "\ue285 "
   },
   "version": 3
