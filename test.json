@@ -41,7 +41,7 @@
             "trailing_diamond": "\ue0b0",
             "foreground": "#D6DEEB",
             "background": "#0F7C11",
-            "template": "{{ if .SSHSession }}\ueb39 {{ end }}{{ .UserName }}"
+            "template": " {{ if .SSHSession }}\ueba9 {{ end }}{{ .UserName }} "
         },
         {
             "type": "executiontime",
@@ -70,7 +70,7 @@
                 "{{ if gt .Ahead 0 }}#0F7C11{{ end }}",
                 "{{ if gt .Behind 0 }}#0F7C11{{ end }}"
             ],
-            "template": " {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uF044 {{ .Working.String }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uF046 {{ .Staging.String }}{{ end }}",
+            "template": " {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uF044 {{ .Working.String }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uF046 {{ .Staging.String }}{{ end }} ",
             "properties": {
                 "fetch_status": true,
                 "fetch_upstream_icon": true,
