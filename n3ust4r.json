@@ -6,8 +6,8 @@
       "newline": true,
       "segments": [
         {
-          "background": "#FEF5ED",
-          "foreground": "#011627",
+          "background": "#107C10",
+          "foreground": "#FEF5ED",
           "leading_diamond": "\ue0b2",
           "properties": {
             "macos": "\uf179 ",
@@ -16,7 +16,7 @@
           },
           "style": "diamond",
           "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}}",
-          "trailing_diamond": "<transparent,#FEF5ED>\ue0b2</>",
+          "trailing_diamond": "<transparent,#107C10>\ue0b2</>",
           "type": "os"
         },
         {
@@ -32,7 +32,7 @@
           "type": "session",
           "style": "diamond",
           "foreground": "#191919",
-          "background": "#107c10",
+          "background": "#107C10",
           "leading_diamond": "\ue0b2",
           "trailing_diamond": "\ue0b0",
           "template": "{{ if .SSHSession }} {{ end }}{{ .UserName }}"
