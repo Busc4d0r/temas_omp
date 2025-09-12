@@ -28,7 +28,7 @@
             "foreground": "#D6DEEB",
             "background": "#3A3A3A",
             "properties": {
-                    "mapped_shell_names": {
+                "mapped_shell_names": {
                     "pwsh": "\uebc7",
                     "bash": "\ue760"
                 }
@@ -50,14 +50,41 @@
             "trailing_diamond": "\ue0b0",
             "foreground": "#D6DEEB",
             "background": "#3A3A3A",
-            "template": " <#fefefe></> {{ .FormattedMs }} ",
+            "template": " <#fefefe>\ue641</> {{ .FormattedMs }} ",
             "properties": {
-            "threshold": 500,
-            "style": "austin",
-            "always_enabled": true
+                "threshold": 500,
+                "style": "austin",
+                "always_enabled": true
+            }
+        },
+        {
+            "type": "git",
+            "style": "diamond",
+            "leading_diamond": "<transparent,#0F7C11>\ue0b0</>",
+            "trailing_diamond": "\ue0b0",
+            "foreground": "#D6DEEB",
+            "background": "#0F7C11",
+            "background_templates": [
+                "{{ if or (.Working.Changed) (.Staging.Changed) }}#0F7C11{{ end }}",
+                "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#0F7C11{{ end }}",
+                "{{ if gt .Ahead 0 }}#0F7C11{{ end }}",
+                "{{ if gt .Behind 0 }}#0F7C11{{ end }}"
+            ],
+            "template": "{{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}",
+            "properties": {
+                "fetch_status": true,
+                "fetch_upstream_icon": true,
+                "untracked_modes": {
+                    "/Users/user/Projects/oh-my-posh/": "no"
+                },
+                "source": "cli",
+                "mapped_branches": {
+                    "feat/*": "🚀 ",
+                    "bug/*": "🐛 "
+                }
             }
         }
-        ]
-    }
     ]
+}
+]
 }
